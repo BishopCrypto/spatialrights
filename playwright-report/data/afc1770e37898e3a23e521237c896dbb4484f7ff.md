@@ -1,0 +1,144 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "SR SpatialRights" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8] [cursor=pointer]: SR
+        - generic [ref=e9] [cursor=pointer]: SpatialRights
+      - generic [ref=e10]:
+        - link "Properties" [ref=e11] [cursor=pointer]:
+          - /url: /properties
+        - link "Marketplace" [ref=e12] [cursor=pointer]:
+          - /url: /marketplace
+        - link "Invest" [ref=e13] [cursor=pointer]:
+          - /url: /invest
+        - link "Admin" [ref=e14] [cursor=pointer]:
+          - /url: /admin
+        - link "List Property" [ref=e15] [cursor=pointer]:
+          - /url: /list-property
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - link "← Back to Empire State Building" [ref=e20] [cursor=pointer]:
+        - /url: /properties/empire-state-building
+      - generic [ref=e21]:
+        - generic [ref=e23]:
+          - heading "Book AR Advertising Zone" [level=1] [ref=e24]
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - heading "Company Information" [level=2] [ref=e27]
+              - generic [ref=e28]:
+                - generic [ref=e29]:
+                  - generic [ref=e30]: Company Name *
+                  - textbox "Acme Corp" [ref=e31]
+                - generic [ref=e32]:
+                  - generic [ref=e33]: Company Website
+                  - textbox "https://acmecorp.com" [ref=e34]
+            - generic [ref=e35]:
+              - heading "Contact Information" [level=2] [ref=e36]
+              - generic [ref=e37]:
+                - generic [ref=e38]:
+                  - generic [ref=e39]: Advertiser Name *
+                  - textbox "John Smith" [ref=e40]
+                - generic [ref=e41]:
+                  - generic [ref=e42]: Email Address *
+                  - textbox "john@acmecorp.com" [ref=e43]
+            - generic [ref=e44]:
+              - heading "Campaign Details" [level=2] [ref=e45]
+              - generic [ref=e46]:
+                - generic [ref=e47]: Campaign Name *
+                - textbox "Summer Product Launch 2024" [ref=e48]
+              - generic [ref=e49]:
+                - generic [ref=e50]: Campaign Description *
+                - textbox "Brief description of your advertising campaign objectives and target audience..." [ref=e51]
+              - generic [ref=e52]:
+                - generic [ref=e53]:
+                  - generic [ref=e54]: Start Date *
+                  - textbox [ref=e55]
+                - generic [ref=e56]:
+                  - generic [ref=e57]: End Date *
+                  - textbox [ref=e58]
+            - generic [ref=e59]:
+              - heading "Content Specifications" [level=2] [ref=e60]
+              - generic [ref=e61]:
+                - generic [ref=e62]:
+                  - generic [ref=e63]: Content Type *
+                  - combobox [ref=e64]:
+                    - option "Video Advertisement" [selected]
+                    - option "3D Model/Product"
+                    - option "Interactive Experience"
+                    - option "Static Image"
+                    - option "Animated Graphics"
+                - generic [ref=e65]:
+                  - generic [ref=e66]: Budget Range *
+                  - combobox [ref=e67]:
+                    - option "Standard Package" [selected]
+                    - option "Premium Package (+50%)"
+                    - option "Enterprise Package (+100%)"
+              - generic [ref=e68]:
+                - generic [ref=e69]: Content Description
+                - textbox "Describe the AR content you plan to display (products, branding, interactive elements, etc.)" [ref=e70]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Target Demographics
+                - textbox "e.g., Age 25-45, Urban professionals, Tech enthusiasts" [ref=e73]
+            - generic [ref=e74]:
+              - button "Submit Booking Request - $0" [disabled] [ref=e75]
+              - paragraph [ref=e76]: Your booking request will be reviewed within 24 hours
+        - generic [ref=e78]:
+          - heading "Booking Summary" [level=3] [ref=e79]
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - heading "North Facade Premium" [level=4] [ref=e82]
+              - paragraph [ref=e83]: Empire State Building
+              - paragraph [ref=e84]: 350 5th Ave
+              - paragraph [ref=e85]: New York, NY
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - generic [ref=e88]: "Dimensions:"
+                - generic [ref=e89]: 48' × 14'
+              - generic [ref=e90]:
+                - generic [ref=e91]: "Area:"
+                - generic [ref=e92]: 672 sq ft
+              - generic [ref=e93]:
+                - generic [ref=e94]: "Visibility:"
+                - generic [ref=e95]: 10/10
+              - generic [ref=e96]:
+                - generic [ref=e97]: "Traffic:"
+                - generic [ref=e98]: 10/10
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: "Base Monthly Rate:"
+              - generic [ref=e102]: $250,000
+            - generic [ref=e103]:
+              - generic [ref=e104]: "Location Premium (50%):"
+              - generic [ref=e105]: +$125,000
+            - generic [ref=e106]:
+              - generic [ref=e107]: "Duration:"
+              - generic [ref=e108]: 0 months
+            - generic [ref=e110]:
+              - generic [ref=e111]: "Total Campaign Cost:"
+              - generic [ref=e112]: $0
+          - generic [ref=e113]:
+            - heading "What's Included:" [level=4] [ref=e114]
+            - list [ref=e115]:
+              - listitem [ref=e116]: • 24/7 content monitoring
+              - listitem [ref=e117]: • AR placement optimization
+              - listitem [ref=e118]: • Performance analytics
+              - listitem [ref=e119]: • Technical support
+              - listitem [ref=e120]: • Content approval process
+  - contentinfo [ref=e121]:
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e126]: SR
+        - generic [ref=e127]: © 2024 SpatialRights. AR Property Rights Management Platform.
+      - generic [ref=e128]:
+        - link "Privacy" [ref=e129] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e130] [cursor=pointer]:
+          - /url: /terms
+        - link "Contact" [ref=e131] [cursor=pointer]:
+          - /url: /contact
+  - alert [ref=e132]
+```

@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  .zone-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .zone-available {
+    @apply border-green-200 bg-green-50;
+  }
+
+  .zone-booked {
+    @apply border-red-200 bg-red-50;
+  }
+
+  .zone-maintenance {
+    @apply border-yellow-200 bg-yellow-50;
+  }
+
+  .property-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .zone-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Zone status indicators */
+.status-available::before {
+  content: '';
+  @apply w-2 h-2 bg-green-500 rounded-full;
+}
+
+.status-booked::before {
+  content: '';
+  @apply w-2 h-2 bg-red-500 rounded-full;
+}
+
+.status-maintenance::before {
+  content: '';
+  @apply w-2 h-2 bg-yellow-500 rounded-full;
+}
+
+/* Interactive zone map styles */
+.zone-map {
+  @apply relative bg-gray-100 rounded-lg overflow-hidden;
+}
+
+.zone-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-200 cursor-pointer;
+}
+
+.zone-overlay:hover {
+  @apply bg-opacity-20;
+}
+
+/* Revenue calculator styles */
+.calculator-slider {
+  @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+.calculator-slider::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-blue-600 rounded-full cursor-pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .property-grid {
+    @apply grid-cols-1;
+  }
+
+  .zone-grid {
+    @apply grid-cols-1 sm:grid-cols-2;
+  }
+}

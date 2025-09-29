@@ -1,0 +1,175 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "SR SpatialRights" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8] [cursor=pointer]: SR
+        - generic [ref=e9] [cursor=pointer]: SpatialRights
+      - generic [ref=e10]:
+        - link "Properties" [ref=e11] [cursor=pointer]:
+          - /url: /properties
+        - link "Marketplace" [ref=e12] [cursor=pointer]:
+          - /url: /marketplace
+        - link "Invest" [ref=e13] [cursor=pointer]:
+          - /url: /invest
+        - link "Admin" [ref=e14] [cursor=pointer]:
+          - /url: /admin
+        - link "List Property" [ref=e15] [cursor=pointer]:
+          - /url: /list-property
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "AR Property Marketplace" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Discover premium AR advertising opportunities from major real estate developers including Simon Property Group, Hines, Tishman Speyer, Brookfield Properties, and more.
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]: "3"
+          - generic [ref=e25]: Properties
+        - generic [ref=e26]:
+          - generic [ref=e27]: "6"
+          - generic [ref=e28]: Available Zones
+        - generic [ref=e29]:
+          - generic [ref=e30]: "1"
+          - generic [ref=e31]: Cities
+        - generic [ref=e32]:
+          - generic [ref=e33]: $1,750,000
+          - generic [ref=e34]: Total Revenue
+      - generic [ref=e35]:
+        - heading "New York, NY" [level=2] [ref=e36]: New York, NY
+        - generic [ref=e37]:
+          - 'link "Times Square Billboard Building Premium MIXED USE Times Square Billboard Building 1 Times Square Jamestown Properties $850,000 monthly potential Daily Traffic: 150,000 Building Height: 395ft Facade Area: 25,000 sq ft Year Built: 1904 2 available 0 booked 2 total zones Visibility: 10/10 View Details →" [ref=e38] [cursor=pointer]':
+            - /url: /properties/times-square-billboard
+            - generic [ref=e39] [cursor=pointer]:
+              - heading "Times Square Billboard Building" [level=3] [ref=e41] [cursor=pointer]
+              - generic [ref=e42] [cursor=pointer]: Premium
+              - generic [ref=e43] [cursor=pointer]: MIXED USE
+            - generic [ref=e44] [cursor=pointer]:
+              - generic [ref=e45] [cursor=pointer]:
+                - generic [ref=e46] [cursor=pointer]:
+                  - heading "Times Square Billboard Building" [level=4] [ref=e47] [cursor=pointer]
+                  - paragraph [ref=e48] [cursor=pointer]: 1 Times Square
+                  - paragraph [ref=e49] [cursor=pointer]: Jamestown Properties
+                - generic [ref=e50] [cursor=pointer]:
+                  - generic [ref=e51] [cursor=pointer]: $850,000
+                  - generic [ref=e52] [cursor=pointer]: monthly potential
+              - generic [ref=e53] [cursor=pointer]:
+                - generic [ref=e54] [cursor=pointer]:
+                  - generic [ref=e55] [cursor=pointer]: "Daily Traffic:"
+                  - generic [ref=e56] [cursor=pointer]: 150,000
+                - generic [ref=e57] [cursor=pointer]:
+                  - generic [ref=e58] [cursor=pointer]: "Building Height:"
+                  - generic [ref=e59] [cursor=pointer]: 395ft
+                - generic [ref=e60] [cursor=pointer]:
+                  - generic [ref=e61] [cursor=pointer]: "Facade Area:"
+                  - generic [ref=e62] [cursor=pointer]: 25,000 sq ft
+                - generic [ref=e63] [cursor=pointer]:
+                  - generic [ref=e64] [cursor=pointer]: "Year Built:"
+                  - generic [ref=e65] [cursor=pointer]: "1904"
+              - generic [ref=e66] [cursor=pointer]:
+                - generic [ref=e67] [cursor=pointer]:
+                  - generic [ref=e69] [cursor=pointer]: 2 available
+                  - generic [ref=e71] [cursor=pointer]: 0 booked
+                - generic [ref=e72] [cursor=pointer]: 2 total zones
+              - generic [ref=e73] [cursor=pointer]:
+                - generic [ref=e74] [cursor=pointer]:
+                  - generic [ref=e75] [cursor=pointer]: "Visibility:"
+                  - generic [ref=e76] [cursor=pointer]: 10/10
+                - generic [ref=e77] [cursor=pointer]: View Details →
+          - 'link "Empire State Building Premium OFFICE Empire State Building 350 5th Ave Empire State Realty Trust $580,000 monthly potential Daily Traffic: 50,000 Building Height: 1,454ft Facade Area: 45,000 sq ft Year Built: 1931 2 available 1 booked 3 total zones Visibility: 10/10 View Details →" [ref=e78] [cursor=pointer]':
+            - /url: /properties/empire-state-building
+            - generic [ref=e79] [cursor=pointer]:
+              - heading "Empire State Building" [level=3] [ref=e81] [cursor=pointer]
+              - generic [ref=e82] [cursor=pointer]: Premium
+              - generic [ref=e83] [cursor=pointer]: OFFICE
+            - generic [ref=e84] [cursor=pointer]:
+              - generic [ref=e85] [cursor=pointer]:
+                - generic [ref=e86] [cursor=pointer]:
+                  - heading "Empire State Building" [level=4] [ref=e87] [cursor=pointer]
+                  - paragraph [ref=e88] [cursor=pointer]: 350 5th Ave
+                  - paragraph [ref=e89] [cursor=pointer]: Empire State Realty Trust
+                - generic [ref=e90] [cursor=pointer]:
+                  - generic [ref=e91] [cursor=pointer]: $580,000
+                  - generic [ref=e92] [cursor=pointer]: monthly potential
+              - generic [ref=e93] [cursor=pointer]:
+                - generic [ref=e94] [cursor=pointer]:
+                  - generic [ref=e95] [cursor=pointer]: "Daily Traffic:"
+                  - generic [ref=e96] [cursor=pointer]: 50,000
+                - generic [ref=e97] [cursor=pointer]:
+                  - generic [ref=e98] [cursor=pointer]: "Building Height:"
+                  - generic [ref=e99] [cursor=pointer]: 1,454ft
+                - generic [ref=e100] [cursor=pointer]:
+                  - generic [ref=e101] [cursor=pointer]: "Facade Area:"
+                  - generic [ref=e102] [cursor=pointer]: 45,000 sq ft
+                - generic [ref=e103] [cursor=pointer]:
+                  - generic [ref=e104] [cursor=pointer]: "Year Built:"
+                  - generic [ref=e105] [cursor=pointer]: "1931"
+              - generic [ref=e106] [cursor=pointer]:
+                - generic [ref=e107] [cursor=pointer]:
+                  - generic [ref=e109] [cursor=pointer]: 2 available
+                  - generic [ref=e111] [cursor=pointer]: 1 booked
+                - generic [ref=e112] [cursor=pointer]: 3 total zones
+              - generic [ref=e113] [cursor=pointer]:
+                - generic [ref=e114] [cursor=pointer]:
+                  - generic [ref=e115] [cursor=pointer]: "Visibility:"
+                  - generic [ref=e116] [cursor=pointer]: 10/10
+                - generic [ref=e117] [cursor=pointer]: View Details →
+          - 'link "Apple Fifth Avenue Premium RETAIL Apple Fifth Avenue 767 5th Ave Apple Inc. $320,000 monthly potential Daily Traffic: 25,000 Building Height: 32ft Facade Area: 8,500 sq ft Year Built: 2019 2 available 0 booked 2 total zones Visibility: 9/10 View Details →" [ref=e118] [cursor=pointer]':
+            - /url: /properties/apple-fifth-avenue
+            - generic [ref=e119] [cursor=pointer]:
+              - heading "Apple Fifth Avenue" [level=3] [ref=e121] [cursor=pointer]
+              - generic [ref=e122] [cursor=pointer]: Premium
+              - generic [ref=e123] [cursor=pointer]: RETAIL
+            - generic [ref=e124] [cursor=pointer]:
+              - generic [ref=e125] [cursor=pointer]:
+                - generic [ref=e126] [cursor=pointer]:
+                  - heading "Apple Fifth Avenue" [level=4] [ref=e127] [cursor=pointer]
+                  - paragraph [ref=e128] [cursor=pointer]: 767 5th Ave
+                  - paragraph [ref=e129] [cursor=pointer]: Apple Inc.
+                - generic [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131] [cursor=pointer]: $320,000
+                  - generic [ref=e132] [cursor=pointer]: monthly potential
+              - generic [ref=e133] [cursor=pointer]:
+                - generic [ref=e134] [cursor=pointer]:
+                  - generic [ref=e135] [cursor=pointer]: "Daily Traffic:"
+                  - generic [ref=e136] [cursor=pointer]: 25,000
+                - generic [ref=e137] [cursor=pointer]:
+                  - generic [ref=e138] [cursor=pointer]: "Building Height:"
+                  - generic [ref=e139] [cursor=pointer]: 32ft
+                - generic [ref=e140] [cursor=pointer]:
+                  - generic [ref=e141] [cursor=pointer]: "Facade Area:"
+                  - generic [ref=e142] [cursor=pointer]: 8,500 sq ft
+                - generic [ref=e143] [cursor=pointer]:
+                  - generic [ref=e144] [cursor=pointer]: "Year Built:"
+                  - generic [ref=e145] [cursor=pointer]: "2019"
+              - generic [ref=e146] [cursor=pointer]:
+                - generic [ref=e147] [cursor=pointer]:
+                  - generic [ref=e149] [cursor=pointer]: 2 available
+                  - generic [ref=e151] [cursor=pointer]: 0 booked
+                - generic [ref=e152] [cursor=pointer]: 2 total zones
+              - generic [ref=e153] [cursor=pointer]:
+                - generic [ref=e154] [cursor=pointer]:
+                  - generic [ref=e155] [cursor=pointer]: "Visibility:"
+                  - generic [ref=e156] [cursor=pointer]: 9/10
+                - generic [ref=e157] [cursor=pointer]: View Details →
+      - generic [ref=e158]:
+        - heading "Don't See Your Property?" [level=2] [ref=e159]
+        - paragraph [ref=e160]: List your building and start earning from AR advertising rights
+        - link "List Your Property" [ref=e161] [cursor=pointer]:
+          - /url: /list-property
+  - contentinfo [ref=e162]:
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e167]: SR
+        - generic [ref=e168]: © 2024 SpatialRights. AR Property Rights Management Platform.
+      - generic [ref=e169]:
+        - link "Privacy" [ref=e170] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e171] [cursor=pointer]:
+          - /url: /terms
+        - link "Contact" [ref=e172] [cursor=pointer]:
+          - /url: /contact
+  - alert [ref=e173]
+```
