@@ -82,10 +82,17 @@ export default function PropertiesPage() {
                           src={property.image_url}
                           alt={property.building_name}
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.target.style.display = 'none'
+                            e.target.parentElement.querySelector('.fallback-text').style.display = 'flex'
+                          }}
                         />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
-                      )}
+                      ) : null}
+                      <div className={`${property.image_url ? 'hidden' : 'flex'} fallback-text absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 group-hover:from-blue-600 group-hover:to-purple-700 transition-all duration-200 items-center justify-center`}>
+                        <h3 className="text-white text-lg font-semibold text-center px-4 drop-shadow-lg">
+                          {property.building_name}
+                        </h3>
+                      </div>
 
                       {/* Market Tier Badge */}
                       <div className="absolute top-4 left-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium">

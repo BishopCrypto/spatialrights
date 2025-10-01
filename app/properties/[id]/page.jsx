@@ -35,10 +35,17 @@ export default function PropertyDetailPage({ params }) {
                 src={property.image_url}
                 alt={property.building_name}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                  e.target.parentElement.querySelector('.fallback-text').style.display = 'flex'
+                }}
               />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
-            )}
+            ) : null}
+            <div className={`${property.image_url ? 'hidden' : 'flex'} fallback-text absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 items-center justify-center`}>
+              <h1 className="text-white text-2xl md:text-4xl font-bold text-center px-4">
+                {property.building_name}
+              </h1>
+            </div>
 
             {/* Zone Overlay Visualization */}
             <div className="absolute inset-0">

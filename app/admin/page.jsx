@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -367,9 +369,11 @@ export default function AdminPage() {
                 </button>
               </div>
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-                <pre className="whitespace-pre-wrap font-sans text-sm text-gray-800 leading-relaxed">
-                  {documentContent}
-                </pre>
+                <div className="prose prose-slate max-w-none">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {documentContent}
+                  </ReactMarkdown>
+                </div>
               </div>
             </div>
           </div>
