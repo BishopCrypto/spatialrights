@@ -120,11 +120,6 @@ export default function HomePage() {
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
                     )}
-                    <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                      <h3 className="text-white text-lg font-semibold text-center px-4 drop-shadow-lg">
-                        {property.building_name}
-                      </h3>
-                    </div>
                     <div className="absolute top-4 right-4 bg-white bg-opacity-90 px-2 py-1 rounded text-sm font-medium">
                       Tier {property.market_tier}
                     </div>

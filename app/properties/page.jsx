@@ -86,11 +86,6 @@ export default function PropertiesPage() {
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
                       )}
-                      <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <h3 className="text-white text-lg font-semibold text-center px-4 drop-shadow-lg">
-                          {property.building_name}
-                        </h3>
-                      </div>
 
                       {/* Market Tier Badge */}
                       <div className="absolute top-4 left-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium">
