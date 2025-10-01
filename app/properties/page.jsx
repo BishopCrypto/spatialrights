@@ -76,9 +76,18 @@ export default function PropertiesPage() {
                     className="card hover:shadow-lg transition-all duration-200 overflow-hidden group"
                   >
                     {/* Property Image/Header */}
-                    <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative">
+                    <div className="aspect-video relative overflow-hidden">
+                      {property.image_url ? (
+                        <img
+                          src={property.image_url}
+                          alt={property.building_name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
+                      )}
                       <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                        <h3 className="text-white text-lg font-semibold text-center px-4">
+                        <h3 className="text-white text-lg font-semibold text-center px-4 drop-shadow-lg">
                           {property.building_name}
                         </h3>
                       </div>

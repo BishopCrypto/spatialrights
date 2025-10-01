@@ -22,52 +22,27 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left Building Visual */}
-            <div className="hidden lg:block">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img
-                  src="/images/ar-building-left.png"
-                  alt="AR Building with Advertising Overlays"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-
-            {/* Center Content */}
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                The Future of AR Advertising
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Discover, book, and monetize AR advertising rights on premium buildings worldwide.
-                From Times Square billboards to shopping mall airspace.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/properties"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Browse Properties
-                </Link>
-                <Link
-                  href="/list-property"
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  List Your Building
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Building Visual */}
-            <div className="hidden lg:block">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img
-                  src="/images/ar-building-right.png"
-                  alt="AR Property Rights Visualization"
-                  className="w-full h-auto"
-                />
-              </div>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              The Future of AR Advertising
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Discover, book, and monetize AR advertising rights on premium buildings worldwide.
+              From Times Square billboards to shopping mall airspace.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/properties"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Browse Properties
+              </Link>
+              <Link
+                href="/list-property"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                List Your Building
+              </Link>
             </div>
           </div>
         </div>
@@ -135,9 +110,18 @@ export default function HomePage() {
                   href={`/properties/${property.id}`}
                   className="card hover:shadow-lg transition-shadow duration-200 overflow-hidden"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative">
+                  <div className="aspect-video relative overflow-hidden">
+                    {property.image_url ? (
+                      <img
+                        src={property.image_url}
+                        alt={property.building_name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
+                    )}
                     <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                      <h3 className="text-white text-lg font-semibold text-center px-4">
+                      <h3 className="text-white text-lg font-semibold text-center px-4 drop-shadow-lg">
                         {property.building_name}
                       </h3>
                     </div>

@@ -1,5 +1,6 @@
 {
-  "/properties/[id]/page": "app/properties/[id]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/properties/page": "app/properties/page.js",
+  "/properties/[id]/page": "app/properties/[id]/page.js",
   "/page": "app/page.js"
 }
