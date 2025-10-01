@@ -8,7 +8,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:3200',
+    baseURL: 'http://localhost:3060',
     trace: 'on-first-retry',
     headless: true,
   },
@@ -19,8 +19,8 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    command: 'echo "Server already running at localhost:3200"',
-    port: 3200,
+    command: 'echo "Server already running at localhost:3060"',
+    port: 3060,
     reuseExistingServer: true,
   },
 });

@@ -14,6 +14,10 @@ export default function AdminPage() {
     totalBookings: 0,
     totalRevenue: 0
   })
+  const [documents, setDocuments] = useState([])
+  const [selectedDocument, setSelectedDocument] = useState(null)
+  const [documentContent, setDocumentContent] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
 
   // Check if already authenticated
   useEffect(() => {
@@ -21,6 +25,7 @@ export default function AdminPage() {
     if (auth === 'authenticated') {
       setIsAuthenticated(true)
       loadStats()
+      loadDocuments()
     }
   }, [])
 
@@ -38,11 +43,37 @@ export default function AdminPage() {
     }
   }
 
+  const loadDocuments = async () => {
+    try {
+      const response = await fetch('/api/documents')
+      const data = await response.json()
+      setDocuments(data.documents || [])
+    } catch (error) {
+      console.error('Error loading documents:', error)
+    }
+  }
+
+  const loadDocumentContent = async (docId) => {
+    try {
+      const response = await fetch(`/api/documents?id=${docId}`)
+      const data = await response.json()
+      setSelectedDocument(data)
+      setDocumentContent(data.content || '')
+    } catch (error) {
+      console.error('Error loading document:', error)
+    }
+  }
+
+  const filteredDocuments = documents.filter(doc =>
+    doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    doc.category.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+
   const handleLogin = (e) => {
     e.preventDefault()
 
     // Simple password protection (in production, use proper authentication)
-    if (username === 'admin' && password === 'password') {
+    if (username === 'admin' && password === '$*#@hh4!jjfFd$$fr') {
       setIsAuthenticated(true)
       sessionStorage.setItem('admin_auth', 'authenticated')
       setError('')
@@ -233,6 +264,108 @@ export default function AdminPage() {
             </div>
           </div>
         </div>
+
+        {/* Documentation & Business Files */}
+        <div className="bg-white rounded-lg shadow mb-8">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <div className="flex justify-between items-center">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Documentation & Business Files</h3>
+                <p className="text-sm text-gray-600 mt-1">Strategic planning and operational documents</p>
+              </div>
+              <div className="text-sm">
+                <span className="font-semibold text-gray-900">{documents.length}</span>
+                <span className="text-gray-600 ml-1">Files</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6">
+            {/* Search Bar */}
+            <div className="mb-6">
+              <input
+                type="text"
+                placeholder="Search documents..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Document List */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredDocuments.map((doc) => (
+                <div
+                  key={doc.id}
+                  onClick={() => loadDocumentContent(doc.id)}
+                  className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 hover:shadow-md transition-all cursor-pointer"
+                >
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                          {doc.category}
+                        </span>
+                      </div>
+                      <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-2">
+                        {doc.title}
+                      </h4>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-gray-500 mt-3 pt-3 border-t border-gray-100">
+                    <span>{doc.size}</span>
+                    <span>{doc.updated}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filteredDocuments.length === 0 && (
+              <div className="text-center py-8 text-gray-500">
+                No documents found matching your search.
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Document Viewer Modal */}
+        {selectedDocument && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+              <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">{selectedDocument.title}</h3>
+                  <div className="flex gap-3 mt-1 text-sm text-gray-600">
+                    <span>{selectedDocument.category}</span>
+                    <span>•</span>
+                    <span>{selectedDocument.size}</span>
+                    <span>•</span>
+                    <span>{selectedDocument.updated}</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => {
+                    setSelectedDocument(null)
+                    setDocumentContent('')
+                  }}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                <pre className="whitespace-pre-wrap font-sans text-sm text-gray-800 leading-relaxed">
+                  {documentContent}
+                </pre>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Recent Activity */}
         <div className="bg-white rounded-lg shadow">
