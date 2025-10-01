@@ -1,0 +1,46 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e6]:
+        - img "AR Property Rights Visualization" [ref=e8]
+        - heading "SpatialRights" [level=1] [ref=e9]:
+          - generic [ref=e10]: Spatial
+          - text: Rights
+        - generic [ref=e11]:
+          - paragraph [ref=e12]: The world's first geospatial AR property rights platform.
+          - paragraph [ref=e13]: Secure, manage, and monetize AR display rights for your buildings
+          - paragraph [ref=e14]: Transform physical properties into premium AR advertising real estate with sub-meter precision
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - img [ref=e17]
+            - heading "Exclusive AR Rights" [level=3] [ref=e21]
+            - paragraph [ref=e22]: Secure legal ownership of AR display rights for your buildings and properties
+          - generic [ref=e23]:
+            - img [ref=e24]
+            - heading "Protection & Control" [level=3] [ref=e26]
+            - paragraph [ref=e27]: Prevent unauthorized AR graffiti and maintain your building's digital reputation
+          - generic [ref=e28]:
+            - img [ref=e29]
+            - heading "Premium Revenue" [level=3] [ref=e31]
+            - paragraph [ref=e32]: Earn up to $50K+ annually from prime AR advertising placements on your building
+        - generic [ref=e33]:
+          - link "View Properties" [ref=e34] [cursor=pointer]:
+            - /url: /properties
+            - text: View Properties
+            - img [ref=e35] [cursor=pointer]
+          - link "Documentation" [ref=e37] [cursor=pointer]:
+            - /url: /admin
+            - text: Documentation
+            - img [ref=e38] [cursor=pointer]
+        - generic [ref=e40]:
+          - paragraph [ref=e41]:
+            - text: Pioneering the
+            - generic [ref=e42]: $100+ billion
+            - text: AR advertising market
+          - paragraph [ref=e43]: Where Physical Properties Meet Digital Possibilities
+      - generic [ref=e44]: © 2024 Nomic Ventures, created by Ryan Scott
+  - alert [ref=e45]
+```
