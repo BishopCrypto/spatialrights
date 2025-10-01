@@ -1,5 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import { properties, arZones, recentBookings, formatCurrency, formatNumber } from '../lib/sample-data'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default function HomePage() {
   // Calculate dashboard stats

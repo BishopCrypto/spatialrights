@@ -1,8 +1,15 @@
+'use client'
+
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { properties, arZones, formatCurrency, formatNumber, getPropertyById, getZonesByProperty, standardSizes } from '../../../lib/sample-data'
+import { use } from 'react'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default function PropertyDetailPage({ params }) {
+  const resolvedParams = use(Promise.resolve(params))
   const property = getPropertyById(params.id)
 
   if (!property) {
