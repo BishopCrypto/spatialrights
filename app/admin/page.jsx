@@ -19,10 +19,11 @@ export default function AdminPage() {
   const [documentContent, setDocumentContent] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
 
-  // Check if already authenticated
+  // Check if already authenticated via cookie
   useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth')
-    if (auth === 'authenticated') {
+    // Check cookie
+    const isAuth = document.cookie.includes('admin_authenticated=true')
+    if (isAuth) {
       setIsAuthenticated(true)
       loadStats()
       loadDocuments()
@@ -74,18 +75,25 @@ export default function AdminPage() {
 
     // Simple password protection (in production, use proper authentication)
     if (username === 'admin' && password === '$*#@hh4!jjfFd$$fr') {
+      // Set cookie for authentication (expires in 24 hours)
+      const expires = new Date()
+      expires.setTime(expires.getTime() + 24 * 60 * 60 * 1000)
+      document.cookie = `admin_authenticated=true; expires=${expires.toUTCString()}; path=/; SameSite=Strict`
+
       setIsAuthenticated(true)
-      sessionStorage.setItem('admin_auth', 'authenticated')
       setError('')
       loadStats()
+      loadDocuments()
     } else {
       setError('Invalid credentials')
     }
   }
 
   const handleLogout = () => {
+    // Remove authentication cookie
+    document.cookie = 'admin_authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+
     setIsAuthenticated(false)
-    sessionStorage.removeItem('admin_auth')
     setUsername('')
     setPassword('')
   }

@@ -2,12 +2,10 @@ import { NextResponse } from 'next/server'
 import fs from 'fs/promises'
 import path from 'path'
 
-// Check authentication from session storage
+// Check authentication from cookies
 function checkAuth(request) {
   const cookies = request.headers.get('cookie') || ''
-  // In a real app, verify session token server-side
-  // For now, rely on client-side session storage check
-  return true // Admin page already checks auth before calling API
+  return cookies.includes('admin_authenticated=true')
 }
 
 // Recursively get all markdown files from a directory
