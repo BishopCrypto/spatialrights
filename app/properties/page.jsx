@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { properties, arZones, formatCurrency, formatNumber } from '../../lib/sample-data'
 
 export const dynamic = 'force-dynamic'
-export const revalidate = 0
 
 export default function PropertiesPage() {
   // Filter and sort properties

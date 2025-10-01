@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 export const dynamic = 'force-dynamic'
-export const revalidate = 0
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)

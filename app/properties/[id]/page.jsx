@@ -6,7 +6,6 @@ import { properties, arZones, formatCurrency, formatNumber, getPropertyById, get
 import { use } from 'react'
 
 export const dynamic = 'force-dynamic'
-export const revalidate = 0
 
 export default function PropertyDetailPage({ params }) {
   const resolvedParams = use(Promise.resolve(params))
