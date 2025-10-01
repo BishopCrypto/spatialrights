@@ -29,7 +29,7 @@ export default function PropertiesPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
             Discover premium AR advertising opportunities from major real estate developers including
-            Simon Property Group, Hines, Tishman Speyer, Brookfield Properties, and more.
+            Simon Property Group, Hines, Tishman Speyer, Brookfield Properties, and more. <Link href="/list-property" className="text-blue-600 hover:text-blue-700 font-medium underline">List your property</Link> to join them.
           </p>
         </div>
 
