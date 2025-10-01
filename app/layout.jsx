@@ -29,9 +29,6 @@ export default function RootLayout({ children }) {
                 <Link href="/properties" className="text-gray-700 hover:text-blue-600 font-medium">
                   Properties
                 </Link>
-                <Link href="/marketplace" className="text-gray-700 hover:text-blue-600 font-medium">
-                  Marketplace
-                </Link>
                 <Link href="/invest" className="text-gray-700 hover:text-blue-600 font-medium">
                   Invest
                 </Link>
