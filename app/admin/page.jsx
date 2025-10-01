@@ -74,7 +74,7 @@ export default function AdminPage() {
     e.preventDefault()
 
     // Simple password protection (in production, use proper authentication)
-    if (username === 'admin' && password === '$*#@hh4!jjfFd$$fr') {
+    if (username === 'admin' && password === 'JjrU&*7343hH%#%fwe') {
       // Set cookie for authentication (expires in 24 hours)
       const expires = new Date()
       expires.setTime(expires.getTime() + 24 * 60 * 60 * 1000)

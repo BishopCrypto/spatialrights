@@ -29,12 +29,16 @@ export default function PropertyDetailPage({ params }) {
         {/* Property Header */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Property Image/Visualization */}
-          <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg relative overflow-hidden">
-            <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-              <h1 className="text-white text-2xl md:text-4xl font-bold text-center px-4">
-                {property.building_name}
-              </h1>
-            </div>
+          <div className="aspect-video rounded-lg relative overflow-hidden">
+            {property.image_url ? (
+              <img
+                src={property.image_url}
+                alt={property.building_name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600" />
+            )}
 
             {/* Zone Overlay Visualization */}
             <div className="absolute inset-0">
